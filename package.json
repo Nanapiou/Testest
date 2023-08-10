@@ -1,0 +1,21 @@
+{
+  "name": "archivateur_man",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/main.js",
+  "type": "module",
+  "scripts": {
+    "start": "node ."
+  },
+  "keywords": [
+    "discord",
+    "bot",
+    "pioucord"
+  ],
+  "author": "nanapiou",
+  "license": "ISC",
+  "dependencies": {
+    "discord-api-types": "^0.37.52",
+    "pioucord": "1.2.8"
+  }
+}
