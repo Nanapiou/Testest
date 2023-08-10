@@ -1,10 +1,6 @@
-import {TOKEN, ANNONCE_ID, ARCHIVE_ID, CALLED_ID} from "./config.js";
+import {ANNONCE_ID, ARCHIVE_ID, CALLED_ID} from "./config.js";
 import {Client} from "pioucord";
 import {createServer} from "http";
-
-const port = process.env.PORT || 3000;
-const server = createServer((req, res) => {});
-server.listen(port);
 
 const client = new Client({
     intents: [
@@ -43,4 +39,8 @@ client.ws.on("MESSAGE_REACTION_ADD", async data => {
     }
 });
 
-await client.login(TOKEN);
+await client.login(process.env.TOKEN);
+
+const port = process.env.PORT || 3000;
+const server = createServer((req, res) => {});
+server.listen(port);
